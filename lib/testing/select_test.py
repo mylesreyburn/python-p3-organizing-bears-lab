@@ -71,7 +71,9 @@ class TestSelectOldestBearAndReturnNameAndAge:
     def test_selects_oldest_bear_and_returns_name_and_age(self):
         '''selects the oldest bear and returns its name and age.'''
         result = cursor.execute(select_oldest_bear_and_returns_name_and_age)
-        assert(result.fetchall() == [
+        schlimb = result.fetchall()
+        print(schlimb)
+        assert(schlimb == [
             ("Mr. Chocolate", 20,),
         ])
 
